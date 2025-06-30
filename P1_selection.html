@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LG Onboarding - Role Selection</title>
+    <!-- Tailwind CDN for quick demo/testing -->
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 min-h-screen pb-[110px] font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow px-4 py-3 flex items-center">
+        <img src="lg_logo.png" alt="LG Logo" class="w-[110px] h-auto object-contain" />
+    </nav>
+
+    <!-- Role Selection Container -->
+    <div class="bg-white rounded-2xl shadow-lg p-9 max-w-[700px] mx-auto mt-[70px]">
+        <h2 class="text-center text-[#A50034] font-bold text-xl mb-6">Are you a new joinee?</h2>
+        <div class="flex flex-wrap justify-center gap-7 max-sm:flex-col max-sm:items-center max-sm:gap-4">
+            <div id="intern"
+                class="cursor-pointer rounded-xl p-4 pt-5 bg-gray-100 text-center shadow-md border-2 border-transparent hover:bg-[#fff0f4] hover:border-[#A50034] hover:scale-105 transition-transform duration-200 min-w-[110px]">
+                <img src="https://img.icons8.com/color/96/000000/student-male--v1.png" alt="Intern"
+                    class="w-[54px] h-[54px] mb-2 rounded-full mx-auto" />
+                <div class="font-semibold text-[#A50034] ">Intern</div>
+            </div>
+            <div id="employee"
+                class="cursor-pointer rounded-xl p-4 pt-5 bg-gray-100 text-center shadow-md border-2 border-transparent hover:bg-[#fff0f4] hover:border-[#A50034] hover:scale-105 transition-transform duration-200 min-w-[110px]">
+                <img src="https://img.icons8.com/color/96/000000/administrator-male.png" alt="Employee"
+                    class="w-[54px] h-[54px] mb-2 rounded-full mx-auto" />
+                <div class="font-semibold text-[#A50034]">Employee</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wave Footer -->
+    <div class="fixed bottom-0 left-0 w-full h-[110px] z-10">
+        <svg viewBox="0 0 1200 110" preserveAspectRatio="none" width="100%" height="110">
+            <path fill="#A50034" d="M0,30 C150,90 350,0 600,30 C850,60 1050,20 1200,30 L1200,110 L0,110 Z" />
+        </svg>
+    </div>
+    <script>
+        document.getElementById("intern").addEventListener("click", function () {
+            window.location.href = "P2Intern.html";
+        });
+        document.getElementById("employee").addEventListener("click", function () {
+            window.location.href = "P2Employee.html";
+        });
+    </script>
+
+</body>
+
+</html>

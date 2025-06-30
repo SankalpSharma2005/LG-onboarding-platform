@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LG Onboarding Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Extend Tailwind with LG colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lg-red': '#A50034',
+                        'lg-grey': '#6B6B6B',
+                        'lg-grey-light': '#999999',
+                    },
+                    backgroundColor: {
+                        'light-bg': '#FFFFFF',
+                    },
+                    textColor: {
+                        'lg-grey': '#6B6B6B',
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-light-bg text-lg-grey min-h-screen transition-colors duration-300">
+
+    <!-- Top Bar -->
+    <header class="flex items-center gap-4 px-6 py-6 border-b js-lg-border border-lg-grey/20">
+        <img src="lg_logo.png" alt="LG Logo" class="h-10 w-auto" />
+    </header>
+
+    <div class="flex flex-col md:flex-row max-w-6xl mx-auto mt-8 gap-8 px-4">
+        <!-- Stepper -->
+        <aside class="w-full md:w-64 flex-shrink-0 flex flex-row md:flex-col items-start md:items-stretch gap-6 md:gap-8">
+            <nav id="stepper-nav" class="flex md:flex-col gap-4 w-full"></nav>
+        </aside>
+
+        <!-- Vertical Divider -->
+        <div class="hidden md:block w-px min-h-[420px] bg-gradient-to-b from-lg-red via-lg-grey to-light-bg opacity-80 mx-4 js-lg-border"></div>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex items-center justify-center">
+            <section id="step-content" class="bg-light-bg border js-lg-border border-lg-grey/20 rounded-2xl shadow-lg w-full max-w-xl p-8 transition-colors duration-300"></section>
+        </main>
+    </div>
+
+    <script src="P3_details_emp.js"></script>
+</body>
+
+</html>
